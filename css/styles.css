@@ -1085,3 +1085,7 @@ header video{
 .mobile #imgQuote1{
   top:50%;
 }
+
+.mobile .section{
+/*  -webkit-font-smoothing:antialiased;*/
+}
