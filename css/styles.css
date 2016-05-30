@@ -1088,4 +1088,9 @@ header video{
 
 .mobile .section{
 /*  -webkit-font-smoothing:antialiased;*/
+font-size: 25px;
+}
+
+.mobile .photo-large{
+  width:100%;
 }
