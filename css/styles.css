@@ -1168,3 +1168,15 @@ font-size: 25px;
   margin-top: 100px;
   margin-left: 50px;
 }
+
+.mobile .final-credit{
+  font-size: 15px;
+  line-height: 1.5em;
+  position:initial;
+  margin-top:10%;
+  color:black;
+  font-family: "arial";
+  margin-left: 10%;
+}
+
+

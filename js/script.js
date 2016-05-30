@@ -7,11 +7,14 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
   $(".mobile-fix").removeClass("col-sm-6");
   $(".mobile-fix").removeClass("col-sm-offset-3");
   $(".mobile-fix").removeClass("col-sm-offset-0");
+  $(".mobile-fix").removeClass("col-sm-offset-4");
 
     // $(".mobile-fix").removeClass("col-sm-offset-2");
   $(".mobile-fix").addClass("col-sm-12");
   // $(".mobile-hide").css("display", "none"); 
   $(".removeContainer").removeClass("container");
+
+
   // $("#main-header").css("top", "660px");
 
 }else{
