@@ -13,6 +13,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
   $(".mobile-fix").addClass("col-sm-12");
   // $(".mobile-hide").css("display", "none"); 
   $(".removeContainer").removeClass("container");
+  $("#header-container-three").css("background-image","none")
 
 
   // $("#main-header").css("top", "660px");
@@ -20,7 +21,10 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 }else{
   jQuery(document).ready(function($){
   $(window).on("load resize", function(){ 
-    var s = skrollr.init();})
+    var s = skrollr.init();
+     // $("#mobile-landing").css("display","none")
+    
+  })
 });
 }
 

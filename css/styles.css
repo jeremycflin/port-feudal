@@ -1164,6 +1164,20 @@ font-size: 25px;
 
 }
 
+.mobile #main-header-three h1{
+  font-size: 70px;
+}
+
+.mobile #main-header-three h2{
+  font-size: 40px;
+  width:100%;
+}
+
+.mobile #main-header-three h3{
+  font-size: 30px;
+
+}
+
 .mobile .g-graphic{
   margin-top: 100px;
   margin-left: 50px;
@@ -1179,4 +1193,17 @@ font-size: 25px;
   margin-left: 10%;
 }
 
+.mobile #main-header-three{
+  color:black;
+  width:100%;
+  left:15%;
+}
 
+#mobile-landing{
+  display:none;
+}
+
+.mobile #mobile-landing{
+  display:block;
+  margin-top:50%;
+}
