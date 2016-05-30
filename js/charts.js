@@ -118,8 +118,16 @@ function drawFirstCompare(){
 
   g.append("text")
     .attr("x",width*0.03)
-    .attr("y",height/2.18)
-    .text("That's 7.5% of total payment")
+    .attr("y",height/2)
+    .text("That's 7.5%")
+    .style("font-family","roboto")
+    .attr("class","paid")
+    .style("opacity",0)
+
+   g.append("text")
+    .attr("x",width*0.03)
+    .attr("y",height/1.7)
+    .text("of total payment")
     .style("font-family","roboto")
     .attr("class","paid")
     .style("opacity",0)

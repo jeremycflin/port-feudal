@@ -1207,3 +1207,11 @@ font-size: 25px;
   display:block;
   margin-top:50%;
 }
+
+.mobile #g-secondCompare{
+  margin-left:10%;
+}
+
+.mobile #g-firstCompare{
+  margin-left:10%;
+}
