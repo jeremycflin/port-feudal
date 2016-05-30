@@ -127,7 +127,7 @@
 .story_intro p{
 /*  margin-top: 1.3em;*/
   margin-bottom: 1.5em;
-  font-size: 1.3em;
+  font-size: 18px;
   letter-spacing: 1.3px;
   padding-bottom: 5em;
   -webkit-font-smoothing:antialiased;
@@ -388,31 +388,30 @@ p{
 
 #audioImg{
 /*  position: relative;*/
-  font-size: 2.5em;
+  font-size: 45px;
   line-height: 1.2em;
   color:white;
 }
 
 #quoteImg2{
 /*  position: relative;*/
-  font-size: 2.5em;
+  font-size: 45px;
   line-height: 1.2em;
   color:white;
 }
 
 #quoteImg3{
 /*  position: relative;*/
-  font-size: 2.5em;
+  font-size: 45px;
   line-height: 1.2em;
   color:black;
 }
 
 .interview{
-  font-size: .5em;
+  font-size: 20px;
   line-height: 1em;
-  color:#D3D3D3;
+  color:#939393;
   font-family:"Georgia";
- /* margin-left: 10%;*/
 }
 
 
@@ -450,82 +449,18 @@ p{
         
 .attribution{
   color:#A09F9F;
+  font-size:14px;
 }
 
 
 
 
 
-
-.navbar{
-  background-color: rgba(178,31,38,.55);
-  /*color:white;*/
-  margin-bottom: 0;
-  border-radius: 0;
-  text-shadow: none !important;
-  padding-left: 10%;
-  opacity:0;
-
-}
-
-
-
-/*ul .nav .navbar-nav{
-  margin-left:-50px;
-}*/
-
-
-.navbar a{
-  text-shadow: none;
-  color:black;
-  margin-bottom: 0;
-  border-radius: 0;
-  text-shadow: none;
-  text-transform: uppercase;
-  text-shadow: none !important;
- /* position:fixed;*/
-}
-
-.navbar a:hover{
-  border-bottom: 4px solid black; 
-  background-color: inherit !important;
-  padding-bottom: 3px;
-  text-shadow: none !important;
-}
-
-.navbar a:focus{
-  border-bottom: 4px solid black; 
-  background-color: inherit !important;
-  padding-bottom: 3px;
-  text-shadow: none !important;
-}
-
-.nav-title{
-  text-transform: uppercase;
-  color:white !important;
- /* margin-top: 15px;*/
-  /*width: 100px;*/
-/*  margin-left: 12px !important;
-  margin-right: 0px !important;*/
-  margin-top: 15px;
-  font-size: 1.8em;
-  font-weight: 600;
-/*  margin-left: 80%;*/
-/*  margin-bottom: 0;*/
-}
 
 .left-fix{
   padding-left: 30px;
 }
 
-.navbar .nav-item{
-  margin:0;
-/*  margin-top: 15px;*/
-}
-
-.nav-link{
-  margin-top: 15px;
-}
 
 .photo-large{
   min-height: 100%;
@@ -629,7 +564,7 @@ p{
 /*****************/
 
 
-#sections {
+/*#sections {
   width: 250px;
   top: 60px;
 }
@@ -650,9 +585,7 @@ p{
   position:absolute;
   top: 0px;
   z-index: 10000;
- /* opacity:0;*/
-
-}
+}*/
 
 #one{
   position: relative;
@@ -985,7 +918,7 @@ margin-bottom: 20px;
 
 .quotebox{
   position:relative;
-  font-size: 2.3em;
+  font-size: 40px;
   line-height: 1.2em;
   margin-top: 4%;
 }
@@ -1127,3 +1060,28 @@ header video{
 .indent{
   text-indent: 1.1em;
 }*/
+
+.mobile .story_intro p{
+  padding-bottom:2em;
+ /* line-height:initial; */
+}
+
+.mobile #main-header{
+  top:660px;
+}
+
+.mobile .quotes{
+  margin-top: 46%;
+}
+
+.mobile .img1{
+  display:none;
+}
+
+.mobile .mobile-hide{
+  display:none;
+} 
+
+.mobile #imgQuote1{
+  top:50%;
+}
