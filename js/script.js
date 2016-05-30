@@ -1,4 +1,24 @@
 
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+  $("body").addClass("mobile");
+  $(".story_intro").removeClass("container");
+  // $(".img1").css("display", "none"); 
+  // $(".quotes").css("margin-top", "46%"); 
+  $(".mobile-fix").removeClass("col-sm-6");
+  $(".mobile-fix").removeClass("col-sm-offset-3");
+  $(".mobile-fix").addClass("col-sm-12");
+  // $(".mobile-hide").css("display", "none"); 
+  $(".removeContainer").removeClass("container");
+  // $("#main-header").css("top", "660px");
+
+}else{
+  jQuery(document).ready(function($){
+  $(window).on("load resize", function(){ 
+    var s = skrollr.init();})
+});
+}
+
+
 jQuery(document).ready(function($){
     $('.lazy').laziestloader();
     
@@ -11,7 +31,7 @@ jQuery(document).ready(function($){
     $(window).on("load resize", function(){ 
         $("#header-container").height($(window).height());
         $("#header-container").width($(window).width()); 
-        var s = skrollr.init();
+        // var s = skrollr.init();
 });  
     
 $(function(){

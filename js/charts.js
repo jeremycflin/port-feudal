@@ -626,23 +626,23 @@ function drawMultiLine(){
       flatData = flatData.concat(d.values);
     });
       
-    voronoiGroup.selectAll("path")
-      .data(voronoi(flatData))
-      .enter().append("path")
-      .attr("d", function(d) { if (d) return "M" + d.join("L") + "Z";})
-      .datum(function(d) { if (d) return d.point;})
-       .on("mouseover", function(d){
-            var key = d["U.S. Custom Ports"].replace(/, /,'');
-            d3.select('#' + key)
-              .style("stroke", "black")
-              .style("stroke-width",2)
-          })
-          .on("mouseout", function(d){
-            var key = d["U.S. Custom Ports"].replace(/, /,'');
-            d3.select('#' + key)
-              .style("stroke", "#ccc")
-              .style("stroke-width",.8)
-          })
+    // voronoiGroup.selectAll("path")
+    //   .data(voronoi(flatData))
+    //   .enter().append("path")
+    //   .attr("d", function(d) { if (d) return "M" + d.join("L") + "Z";})
+    //   .datum(function(d) { if (d) return d.point;})
+    //    .on("mouseover", function(d){
+    //         var key = d["U.S. Custom Ports"].replace(/, /,'');
+    //         d3.select('#' + key)
+    //           .style("stroke", "black")
+    //           .style("stroke-width",2)
+    //       })
+    //       .on("mouseout", function(d){
+    //         var key = d["U.S. Custom Ports"].replace(/, /,'');
+    //         d3.select('#' + key)
+    //           .style("stroke", "#ccc")
+    //           .style("stroke-width",.8)
+    //       })
           
     dataNest
       .filter(function(d){return d.key=="New York, NY"})
