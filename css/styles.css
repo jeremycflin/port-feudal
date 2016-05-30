@@ -1067,7 +1067,8 @@ header video{
 }
 
 .mobile #main-header{
-  top:660px;
+  left:30%;
+  top:5%;
 }
 
 .mobile .quotes{
@@ -1093,4 +1094,14 @@ font-size: 25px;
 
 .mobile .photo-large{
   width:100%;
+}
+
+.mobile #intro-video{
+  width:100%;
+  max-height:800px;
+  top:35%;
+}
+
+.mobile #header-container{
+  max-height:900px;
 }
