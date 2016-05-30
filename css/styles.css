@@ -1107,9 +1107,25 @@ font-size: 25px;
   top:55%;
 }
 
+.mobile #intro-video-two{
+  width:100%;
+  max-height:800px;
+  top:55%;
+}
+
 .mobile #header-container{
   max-height:1200px;
+}
 
+.mobile #header-container-two{
+  max-height:1200px;
+  
+
+}
+
+.mobile #main-header-two{
+  max-width: 1200px;
+  left:0%;
 }
 
 .mobile #main-header h1{
@@ -1122,6 +1138,28 @@ font-size: 25px;
 }
 
 .mobile #main-header h3{
+  font-size: 30px;
+
+}
+
+.mobile #pTwo-intro p{
+  margin-top: 100px;
+}
+
+.mobile #main-header-two h1{
+  font-size: 70px;
+}
+
+.mobile #next-left{
+  margin-top: -135px;
+}
+
+.mobile #main-header-two h2{
+  font-size: 50px;
+  width:100%;
+}
+
+.mobile #main-header-two h3{
   font-size: 30px;
 
 }
