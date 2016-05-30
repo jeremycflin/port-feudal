@@ -1092,9 +1092,9 @@ header video{
   top:50%;
 }
 
-.mobile .section{
+.mobile .section {
 /*  -webkit-font-smoothing:antialiased;*/
-font-size: 25px;
+font-size: 35px !important;
 }
 
 .mobile .photo-large{
