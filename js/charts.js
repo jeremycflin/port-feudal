@@ -220,9 +220,9 @@ function drawSecondCompare(){
   var total;
 
   if(d3.select("body").classed("mobile") == true){
-     var margin = {top:80, right: 0, bottom: 0, left: 40},
+     var margin = {top:80, right: 0, bottom: 0, left: 100},
       width = 600 - margin.left - margin.right,
-      height = 550 - margin.top - margin.bottom;
+      height = 650 - margin.top - margin.bottom;
       total = 500;
     }else{
       var margin = {top:80, right: 0, bottom: 0, left: 40},
@@ -300,6 +300,11 @@ function drawSecondCompare(){
     .datum([[250,50],[270,70]])
     .attr("d", swoopy);
 
+  // g.append("path")
+  //   .attr('marker-end', 'url(#arrowhead)')
+  //   .datum([[420,230],[580,270]])
+  //   .attr("d", swoopy);
+
   g.append("path")
     .attr("class","paid")
     .attr('marker-end', 'url(#arrowhead)')
@@ -324,6 +329,70 @@ function drawSecondCompare(){
     .attr("class","hispanicLabel")
     .style("opacity",0)
 
+
+  g.append("text")
+    .attr("x",width/5)
+    .attr("y",height - 20)
+    .text("Total drivers")
+    .style("font-family","roboto")
+    .style("font-size","35px")
+    .attr("class","mobile-smallChartLabel")
+    .style("opacity",0)
+
+
+  g.append("text")
+    .attr("x",width/1.39)
+    .attr("y",-50)
+    .text("Hispanic")
+    .style("font-family","roboto")
+    .style("font-size","35px")
+    .attr("class","mobile-smallChartLabel")
+    .style("opacity",0)
+
+  g.append("text")
+    .attr("x",width/1.39)
+    .attr("y",-10)
+    .text("94%")
+    .style("font-family","roboto")
+    .style("font-size","35px")
+    .attr("class","mobile-smallChartLabel")
+    .style("opacity",0)
+
+  g.append("text")
+    .attr("x",width/2.15)
+    .attr("y",-50)
+    .text("Foreign")
+    .style("font-family","roboto")
+    .style("font-size","35px")
+    .attr("class","mobile-smallChartLabel")
+    .style("opacity",0)
+
+  g.append("text")
+    .attr("x",width/2.15)
+    .attr("y",-10)
+    .text("89%")
+    .style("font-family","roboto")
+    .style("font-size","35px")
+    .attr("class","mobile-smallChartLabel")
+    .style("opacity",0)
+
+  g.append("text")
+    .attr("x",-100)
+    .attr("y",-50)
+    .text("No higher education")
+    .style("font-family","roboto")
+    .style("font-size","35px")
+    .attr("class","mobile-smallChartLabel")
+    .style("opacity",0)
+
+   g.append("text")
+    .attr("x",-100)
+    .attr("y",-10)
+    .text("70%")
+    .style("font-family","roboto")
+    .style("font-size","35px")
+    .attr("class","mobile-smallChartLabel")
+    .style("opacity",0)
 
   g.append("text")
     .attr("x",width/1.4)
@@ -387,15 +456,7 @@ function drawSecondCompare(){
     .attr("class","highschoolLabel")
     .style("opacity",0)
 
-  // g.append("text")
-  //   .attr("x",width/1.4)
-  //   .attr("y",height/2.3)
-  //   .text("$tktktk")
-  //   .style("font-family","roboto")
-  //   .style("font-size","13px")
-  //   .attr("class","smallChartLabel")
 
-  
 
   // g.append("text")
   //   .attr("x",0)
@@ -460,6 +521,12 @@ function drawSecondCompare(){
 
 
     d3.selectAll(".hispanicLabel")
+      .transition()
+      .duration(500)
+      .delay(300)
+      .style("opacity",1)
+
+     d3.selectAll(".mobile-smallChartLabel")
       .transition()
       .duration(500)
       .delay(300)
@@ -855,5 +922,5 @@ function drawSmallMultiple(){
 // drawSmallMultiple();
 drawFirstCompare();
 drawSecondCompare();
-drawMultiLine();
+// drawMultiLine();
 
