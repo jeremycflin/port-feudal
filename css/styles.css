@@ -1084,9 +1084,9 @@ header video{
   display:none;
 }
 
-.mobile .mobile-hide{
+/*.mobile .mobile-hide{
   display:none;
-} 
+} */
 
 .mobile #imgQuote1{
   top:50%;
@@ -1094,7 +1094,19 @@ header video{
 
 .mobile .section {
 /*  -webkit-font-smoothing:antialiased;*/
-font-size: 35px !important;
+  font-size: 40px !important;
+  padding-left:30px;
+  padding-right:30px;
+}
+
+.mobile .story_intro{
+  font-size: 50px;
+  padding-left:30px;
+  padding-right:30px;
+}
+
+.mobile .section_titles{
+  font-size: 60px;
 }
 
 .mobile .photo-large{
