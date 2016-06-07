@@ -2,8 +2,6 @@
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
   $("body").addClass("mobile");
   $(".story_intro").removeClass("container");
-  // $(".img1").css("display", "none"); 
-  // $(".quotes").css("margin-top", "46%"); 
   $(".mobile-fix").removeClass("col-sm-6");
   $(".mobile-fix").removeClass("col-sm-offset-3");
   $(".mobile-fix").removeClass("col-sm-offset-0");
@@ -13,9 +11,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
   
  
 
-    // $(".mobile-fix").removeClass("col-sm-offset-2");
   $(".mobile-fix").addClass("col-sm-12");
-  // $(".mobile-hide").css("display", "none"); 
   $(".removeContainer").removeClass("container");
   $("#header-container-three").css("background-image","none")
 

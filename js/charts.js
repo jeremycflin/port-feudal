@@ -217,11 +217,20 @@ function drawSecondCompare(){
 
   var container = d3.select('#g-secondCompare');
 
-  var margin = {top:80, right: 0, bottom: 0, left: 40},
-  width = 400 - margin.left - margin.right,
-  height = 350 - margin.top - margin.bottom;
+  var total;
 
-  var total = 250;
+  if(d3.select("body").classed("mobile") == true){
+     var margin = {top:80, right: 0, bottom: 0, left: 40},
+      width = 600 - margin.left - margin.right,
+      height = 550 - margin.top - margin.bottom;
+      total = 500;
+    }else{
+      var margin = {top:80, right: 0, bottom: 0, left: 40},
+      width = 400 - margin.left - margin.right,
+      height = 350 - margin.top - margin.bottom;
+      total = 250;
+    }
+
   var hispanic = Math.sqrt(total*total*0.94);
   var foreign = Math.sqrt(total*total*0.89);
   var highschool = Math.sqrt(total*total*0.7);
