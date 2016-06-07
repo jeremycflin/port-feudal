@@ -8,6 +8,10 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
   $(".mobile-fix").removeClass("col-sm-offset-3");
   $(".mobile-fix").removeClass("col-sm-offset-0");
   $(".mobile-fix").removeClass("col-sm-offset-4");
+  $(".mobile-fix").removeClass("col-sm-offset-2");
+  $(".mobile-fix").removeClass("col-sm-8");
+  
+ 
 
     // $(".mobile-fix").removeClass("col-sm-offset-2");
   $(".mobile-fix").addClass("col-sm-12");
