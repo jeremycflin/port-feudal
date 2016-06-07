@@ -1121,7 +1121,7 @@ header video{
 .mobile #intro-video{
   width:100%;
   max-height:800px;
-  top:55%;
+  top:65%;
 }
 
 .mobile #intro-video-two{
@@ -1155,7 +1155,7 @@ header video{
 }
 
 .mobile #main-header h3{
-  font-size: 50px;
+  font-size: 40px;
 
 }
 
