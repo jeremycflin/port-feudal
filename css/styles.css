@@ -1100,10 +1100,13 @@ header video{
 }
 
 .mobile .story_intro{
-  font-size: 80px;
   padding-left:30px;
   padding-right:30px;
 /*  line-height: 1.5em;*/
+}
+
+.mobile .story_intro p{
+   font-size: 60px;
 }
 
 .mobile .section_titles{
@@ -1229,3 +1232,25 @@ header video{
 .mobile #g-firstCompare{
   margin-left:10%;
 }
+
+.mobile .g-title{
+  font-size: 40px;
+}
+
+.mobile .long-quote{
+  border-left: 15px solid #B21F26;
+}
+
+.mobile .section_titles{
+   border-bottom: 15px solid #B21F26;
+}
+
+/*.mobile .mobile-smallChartLabel{
+  font-size: 40px;
+  font-family: "Roboto",
+
+}*/
+
+/*.mobile .smallChartLabel{
+  display:none;
+}*/
