@@ -1100,10 +1100,10 @@ header video{
 }
 
 .mobile .story_intro{
-  font-size: 50px;
+  font-size: 80px;
   padding-left:30px;
   padding-right:30px;
-  line-height: 1.5em;
+/*  line-height: 1.5em;*/
 }
 
 .mobile .section_titles{
@@ -1124,7 +1124,7 @@ header video{
 .mobile #intro-video-two{
   width:100%;
   max-height:800px;
-  top:65%;
+  top:75%;
 }
 
 .mobile #header-container{
