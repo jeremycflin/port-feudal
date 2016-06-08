@@ -1288,6 +1288,12 @@ header video{
   fill:none;
 }
 
+
+.LA{
+  stroke:#FF0076;
+  stroke-width:4;
+}
+
 /*.mobile .mobile-smallChartLabel{
   font-size: 40px;
   font-family: "Roboto",
