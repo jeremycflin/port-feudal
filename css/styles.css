@@ -1094,7 +1094,7 @@ header video{
 
 .mobile .section {
 /*  -webkit-font-smoothing:antialiased;*/
-  font-size: 40px !important;
+  font-size: 45px !important;
   padding-left:30px;
   padding-right:30px;
 }
@@ -1243,6 +1243,34 @@ header video{
 
 .mobile .section_titles{
    border-bottom: 15px solid #B21F26;
+}
+
+.mobile .caption{
+  font-size:30px;
+}
+
+.mobile .attribution{
+  font-size:30px;
+}
+
+.mobile #imgQuote2{
+  top: 130px;
+  margin-left:1%;
+  width: 630px;
+}
+
+.mobile .next-title{
+  font-size: 60px;
+  margin-top: -30px;
+}
+
+.mobile .next{
+  font-size: 30px;
+}
+
+.mobile .arrow-right{
+  left: 710px;
+  top: 200px;
 }
 
 /*.mobile .mobile-smallChartLabel{
