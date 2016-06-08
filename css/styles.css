@@ -1116,6 +1116,7 @@ header video{
 
 .mobile .photo-large{
   width:100%;
+  min-width:110%;
 }
 
 .mobile #intro-video{
@@ -1125,7 +1126,7 @@ header video{
 }
 
 .mobile #intro-video-two{
-  width:100%;
+  width:120%;
   max-height:800px;
   top:75%;
 }
@@ -1271,6 +1272,10 @@ header video{
 .mobile .arrow-right{
   left: 710px;
   top: 200px;
+}
+
+.mobile #quote3{
+  margin-top:38%;
 }
 
 /*.mobile .mobile-smallChartLabel{
