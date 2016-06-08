@@ -1278,6 +1278,10 @@ header video{
   margin-top:38%;
 }
 
+.mobile .second-page{
+  padding-left: 0px;
+}
+
 /*.mobile .mobile-smallChartLabel{
   font-size: 40px;
   font-family: "Roboto",
