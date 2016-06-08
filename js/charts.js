@@ -220,9 +220,9 @@ function drawSecondCompare(){
   var total;
 
   if(d3.select("body").classed("mobile") == true){
-     var margin = {top:80, right: 0, bottom: 0, left: 100},
+     var margin = {top:120, right: 0, bottom: 0, left: 100},
       width = 600 - margin.left - margin.right,
-      height = 650 - margin.top - margin.bottom;
+      height = 700 - margin.top - margin.bottom;
       total = 500;
     }else{
       var margin = {top:80, right: 0, bottom: 0, left: 40},
@@ -306,15 +306,51 @@ function drawSecondCompare(){
   //   .attr("d", swoopy);
 
   g.append("path")
-    .attr("class","paid")
+    // .attr("class","paid")
     .attr('marker-end', 'url(#arrowhead)')
     .datum([[10,5],[30,-30]])
     .attr("d", swoopy)
     .attr("class","highschoolLabel")
     .style("opacity",0)
+
+
+
+
+  g.append("path")
+    .attr('marker-end', 'url(#arrowhead)')
+    .datum([[10,10],[-10,-30]])
+    .attr("d", swoopy)
+    .classed("smallChartLabel",true)
+    .style("opacity",0)
+
+  g.append("path")
+    .attr('marker-end', 'url(#arrowhead)')
+    .datum([[450,3],[300,-30]])
+    // .datum([[300,-40],[450,8]])
+    .attr("d", swoopy)
+    .classed("smallChartLabel",true)
+    .style("opacity",0)
+
+
+  g.append("path")
+    .attr('marker-end', 'url(#arrowhead)')
+    .datum([[480,3],[400,-30]])
+    // .datum([[300,-40],[450,8]])
+    .attr("d", swoopy)
+    .classed("smallChartLabel",true)
+    .style("opacity",0)
+
+  g.append("path")
+    .attr('marker-end', 'url(#arrowhead)')
+    .datum([[300,500],[280,530]])
+    .attr("d", swoopy)
+    .classed("smallChartLabel",true)
+    .style("opacity",0)
+
+
     
   g.append("path")
-    .attr("class","paid")
+    // .attr("class","paid")
     .attr('marker-end', 'url(#arrowhead)')
     .datum([[220,0],[215,-30]])
     .attr("d", swoopy)
@@ -329,8 +365,9 @@ function drawSecondCompare(){
     .attr("class","hispanicLabel")
     .style("opacity",0)
 
+if(d3.select("body").classed("mobile") == true){
 
-  g.append("text")
+   g.append("text")
     .attr("x",width/5)
     .attr("y",height - 20)
     .text("Total drivers")
@@ -342,7 +379,7 @@ function drawSecondCompare(){
 
   g.append("text")
     .attr("x",width/1.39)
-    .attr("y",-50)
+    .attr("y",-80)
     .text("Hispanic")
     .style("font-family","roboto")
     .style("font-size","35px")
@@ -351,7 +388,7 @@ function drawSecondCompare(){
 
   g.append("text")
     .attr("x",width/1.39)
-    .attr("y",-10)
+    .attr("y",-40)
     .text("94%")
     .style("font-family","roboto")
     .style("font-size","35px")
@@ -360,7 +397,7 @@ function drawSecondCompare(){
 
   g.append("text")
     .attr("x",width/2.15)
-    .attr("y",-50)
+    .attr("y",-80)
     .text("Foreign")
     .style("font-family","roboto")
     .style("font-size","35px")
@@ -369,7 +406,7 @@ function drawSecondCompare(){
 
   g.append("text")
     .attr("x",width/2.15)
-    .attr("y",-10)
+    .attr("y",-40)
     .text("89%")
     .style("font-family","roboto")
     .style("font-size","35px")
@@ -378,7 +415,7 @@ function drawSecondCompare(){
 
   g.append("text")
     .attr("x",-100)
-    .attr("y",-50)
+    .attr("y",-80)
     .text("No higher education")
     .style("font-family","roboto")
     .style("font-size","35px")
@@ -387,20 +424,16 @@ function drawSecondCompare(){
 
    g.append("text")
     .attr("x",-100)
-    .attr("y",-10)
+    .attr("y",-40)
     .text("70%")
     .style("font-family","roboto")
     .style("font-size","35px")
     .attr("class","mobile-smallChartLabel")
     .style("opacity",0)
 
-  g.append("text")
-    .attr("x",width/1.4)
-    .attr("y",height/2.8)
-    .text("Total drivers")
-    .style("font-family","roboto")
-    .style("font-size","13px")
-    .attr("class","smallChartLabel")
+  
+
+  }else{
 
   g.append("text")
     .attr("x",width/1.4)
@@ -456,25 +489,15 @@ function drawSecondCompare(){
     .attr("class","highschoolLabel")
     .style("opacity",0)
 
+  g.append("text")
+    .attr("x",width/1.4)
+    .attr("y",height/2.8)
+    .text("Total drivers")
+    .style("font-family","roboto")
+    .style("font-size","13px")
+    .attr("class","smallChartLabel")
+  }
 
-
-  // g.append("text")
-  //   .attr("x",0)
-  //   .attr("y",-60)
-  //   .text("Total paid")
-  //   .style("font-family","roboto")
-  //   .style("font-size","13px")
-  //   .attr("class","paid")
-  //   .style("opacity",0)
-
-  // g.append("text")
-  //   .attr("x",0)
-  //   .attr("y",-40)
-  //   .text("$2442213")
-  //   .style("font-family","roboto")
-  //   .style("font-size","13px")
-  //   .attr("class","paid")
-  //   .style("opacity",0)
 
   var mySquare= g.append("rect")
     .attr("x",0)
@@ -509,40 +532,56 @@ function drawSecondCompare(){
 
   function update(){
 
-      d3.select("#Alldrivers").transition()
-        .duration(2000).ease("linear")
-        .attr({
-          'width': highschool,
-          'height': highschool
-        })
-        .style("fill","#FF0076")
-
-   
+    d3.select("#Alldrivers").transition()
+      .duration(2000).ease("linear")
+      .attr({
+        'width': highschool,
+        'height': highschool
+      })
+      .style("fill","#FF0076")
 
 
-    d3.selectAll(".hispanicLabel")
-      .transition()
-      .duration(500)
-      .delay(300)
-      .style("opacity",1)
 
-     d3.selectAll(".mobile-smallChartLabel")
-      .transition()
-      .duration(500)
-      .delay(300)
-      .style("opacity",1)
+    if(d3.select("body").classed("mobile") == true){
 
-    d3.selectAll(".foreignLabel")
-      .transition()
-      .duration(1000)
-      .delay(300)
-      .style("opacity",1)
+    
+      d3.selectAll(".mobile-smallChartLabel")
+        .transition()
+        .duration(500)
+        .delay(300)
+        .style("opacity",1)
 
-    d3.selectAll(".highschoolLabel")
-      .transition()
-      .duration(2500)
-      .delay(300)
-      .style("opacity",1)
+      d3.selectAll(".smallChartLabel")
+        .transition()
+        .duration(500)
+        .delay(300)
+        .style("opacity",1)
+
+      }else{
+
+      d3.selectAll(".hispanicLabel")
+        .transition()
+        .duration(500)
+        .delay(300)
+        .style("opacity",1)
+
+      d3.selectAll(".foreignLabel")
+        .transition()
+        .duration(1000)
+        .delay(300)
+        .style("opacity",1)
+
+      d3.selectAll(".highschoolLabel")
+        .transition()
+        .duration(2500)
+        .delay(300)
+        .style("opacity",1)
+
+      }
+
+     
+
+    
 
     d3.select("#touchTwo")
       .transition()
