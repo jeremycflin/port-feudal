@@ -600,11 +600,19 @@ if(d3.select("body").classed("mobile") == true){
 
 function drawMultiLine(){
 
+  if(d3.select("body").classed("mobile") == true){
+    var margin = {top:120, right: 0, bottom: 0, left: 100},
+    width = 600 - margin.left - margin.right,
+    height = 700 - margin.top - margin.bottom;
+  }else{
+    var margin = {top:10, right: 80, bottom: 30, left: 30},
+    width = 300 - margin.left - margin.right,
+    height = 550 - margin.top - margin.bottom;
+    }
+
   var container = d3.select('#g-multiline');
 
-  var margin = {top:10, right: 80, bottom: 30, left: 30},
-  width = 300 - margin.left - margin.right,
-  height = 550 - margin.top - margin.bottom;
+ 
 
   var parseYear = d3.time.format("%Y").parse;
 
