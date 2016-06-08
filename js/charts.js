@@ -213,7 +213,7 @@ function drawFirstCompare(){
 function drawSecondCompare(){
 
 
-  // var data = {name : 'LONG BEACH LEGAL',type : 'SETTLEMENTS AND JUDGMENTS', totalOwed: [30.1500,-97.7500],collected:2442213};
+ 
 
   var container = d3.select('#g-secondCompare');
 
@@ -285,8 +285,6 @@ function drawSecondCompare(){
     // .style("stroke-dasharray","5, 5")
     // .style("stroke","black")
     // .style("stroke-width",1.5)
-
-
 
 
 
@@ -818,142 +816,110 @@ function drawMultiLine(){
   })
 }
 
-function drawSmallMultiple(){
+// function drawSmallMultiple(){
 
-  var container = d3.select('#g-smallMultiple');
+//   var container = d3.select('#g-smallMultiple');
 
-  var margin = {top:40, right: 10, bottom: 20, left: 30},
-  width = 110 - margin.left - margin.right,
-  height = 150 - margin.top - margin.bottom;
+//   var margin = {top:40, right: 10, bottom: 20, left: 30},
+//   width = 110 - margin.left - margin.right,
+//   height = 150 - margin.top - margin.bottom;
 
  
 
-  var parseYear = d3.time.format("%Y").parse;
+//   var parseYear = d3.time.format("%Y").parse;
 
 
-  var x = d3.time.scale().range([0, width]);
-  var y = d3.scale.linear().range([height, 0]);
+//   var x = d3.time.scale().range([0, width]);
+//   var y = d3.scale.linear().range([height, 0]);
 
-  var xAxis = d3.svg.axis().scale(x)
-      .orient("bottom")
-      .ticks(2)
+//   var xAxis = d3.svg.axis().scale(x)
+//       .orient("bottom")
+//       .ticks(2)
 
-  var yAxis = d3.svg.axis().scale(y)
-      .orient("right").ticks(4)
+//   var yAxis = d3.svg.axis().scale(y)
+//       .orient("right").ticks(4)
 
-  var valueline = d3.svg.line()
-    .interpolate("step-before")
-    .x(function(d) { return x(d.Year); })
-    .y(function(d) { return y(d.Value); });
-
-
-  function make_x_axis() { return d3.svg.axis()
-    .scale(x)
-    .orient("bottom")
-    .ticks(2)
-  }
-  function make_y_axis() { return d3.svg.axis()
-    .scale(y)
-    .orient("left")
-    .ticks(2)
-  }
-
-  d3.csv("../../data/container_data.csv", function(error,data){
-    if (error) throw error; 
-
-    data.forEach(function(d) {
-      d.Year = parseYear(d.Year);
-      d.Value = +d.Value;
-
-    });
-
-    var dataNest = d3.nest()
-        .key(function(d){return d["U.S. Custom Ports"]})
-        .entries(data);
-
-    x.domain(d3.extent(data, function(d) { return d.Year; }));
-    y.domain([0, d3.max(data, function(d) { return d.Value; })]);
-
-    var dataMapped = dataNest.map(function(d){return d.key});
-
-   container
-      .selectAll(".g-all-maps")
-      .data(dataMapped)
-      .enter()
-      .append('div')
-      .attr('class', 'g-container')
-      .each(render);
+//   var valueline = d3.svg.line()
+//     .interpolate("step-before")
+//     .x(function(d) { return x(d.Year); })
+//     .y(function(d) { return y(d.Value); });
 
 
-    function render(x){
-      var container = d3.select(this);
+//   function make_x_axis() { return d3.svg.axis()
+//     .scale(x)
+//     .orient("bottom")
+//     .ticks(2)
+//   }
+//   function make_y_axis() { return d3.svg.axis()
+//     .scale(y)
+//     .orient("left")
+//     .ticks(2)
+//   }
 
-      var g = container
-        .append('div').attr('class', 'small-container')
-        .append("svg")
-        // .style("background-color","grey")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-        .append('g')
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+//   d3.csv("../../data/container_data.csv", function(error,data){
+//     if (error) throw error; 
 
-      g.append("g")
-      .attr("class", "xgrid")
-      .attr("transform", "translate(0," + height + ")")
-      .call(make_x_axis()
-          .tickSize(-height, 0, 0)     
-      )
+//     data.forEach(function(d) {
+//       d.Year = parseYear(d.Year);
+//       d.Value = +d.Value;
+
+//     });
+
+//     var dataNest = d3.nest()
+//         .key(function(d){return d["U.S. Custom Ports"]})
+//         .entries(data);
+
+//     x.domain(d3.extent(data, function(d) { return d.Year; }));
+//     y.domain([0, d3.max(data, function(d) { return d.Value; })]);
+
+//     var dataMapped = dataNest.map(function(d){return d.key});
+
+//    container
+//       .selectAll(".g-all-maps")
+//       .data(dataMapped)
+//       .enter()
+//       .append('div')
+//       .attr('class', 'g-container')
+//       .each(render);
 
 
-    // g.append("g")
-    //   .attr("class", "ygrid")
-    //   .call(make_y_axis()
-    //       .tickSize(-width, 0, 0)
-    //       .ticks(2)
-    //       .tickFormat(d3.format("s"))
-    //   )
+//     function render(x){
+//       var container = d3.select(this);
 
-    // g.append("g")         // Add the X Axis
-    //   .attr("class", "x axis")
-    //   .attr("transform", "translate(0," + height + ")")
-    //   .call(xAxis);
+//       var g = container
+//         .append('div').attr('class', 'small-container')
+//         .append("svg")
+//         // .style("background-color","grey")
+//         .attr("width", width + margin.left + margin.right)
+//         .attr("height", height + margin.top + margin.bottom)
+//         .append('g')
+//         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    // g.append("g")         // Add the Y Axis
-    //   .attr("class", "y axis")
-    //   .call(yAxis)
-    //   .append("text")
-    //   .attr("y", 25)
-    //   .attr("dy", ".71em")
-    //   .style("text-anchor", "end")
-    //   .text("Tons");
-     
-          // console.log(x)
-          // console.log(data)
+//       g.append("g")
+//       .attr("class", "xgrid")
+//       .attr("transform", "translate(0," + height + ")")
+//       .call(make_x_axis()
+//           .tickSize(-height, 0, 0)     
+//       )
 
-      g.append("path")
-        .attr("class", "line")
-        .attr("d", function(d){return valueline(data.filter(function(d){
-          if(d["U.S. Custom Ports"] == "Los Angeles, CA"){return d;}
-              }))})
+//       g.append("path")
+//         .attr("class", "line")
+//         .attr("d", function(d){return valueline(data.filter(function(d){
+//           if(d["U.S. Custom Ports"] == "Los Angeles, CA"){return d;}
+//               }))})
 
-      g.append("path")
-        .attr("class", "highlightLine")
-        .attr("d", function(d){return valueline(data.filter(function(d){
-          if(d["U.S. Custom Ports"] == x){return console.log(x),d;}
-              }))})
+//       g.append("path")
+//         .attr("class", "highlightLine")
+//         .attr("d", function(d){return valueline(data.filter(function(d){
+//           if(d["U.S. Custom Ports"] == x){return console.log(x),d;}
+//               }))})
 
-      // data.filter(function(d){
-      //     if(d["U.S. Custom Ports"] == x){return d;}
-      //         })
-
-  
-  
-    }
+//     }
 
 
 
-  })
-}
+//   })
+// }
 
 
 
@@ -961,5 +927,5 @@ function drawSmallMultiple(){
 // drawSmallMultiple();
 drawFirstCompare();
 drawSecondCompare();
-// drawMultiLine();
+drawMultiLine();
 
