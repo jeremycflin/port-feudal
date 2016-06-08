@@ -1282,6 +1282,18 @@ header video{
   padding-left: 0px;
 }
 
+.mobiel .line{
+  stroke:#ccc;
+  stroke-width:2;
+  fill:none;
+}
+
+
+.LA{
+  stroke:#FF0076;
+  stroke-width:4;
+}
+
 /*.mobile .mobile-smallChartLabel{
   font-size: 40px;
   font-family: "Roboto",

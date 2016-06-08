@@ -601,7 +601,7 @@ if(d3.select("body").classed("mobile") == true){
 function drawMultiLine(){
 
   if(d3.select("body").classed("mobile") == true){
-    var margin = {top:120, right: 0, bottom: 0, left: 100},
+    var margin = {top:120, right: 50, bottom: 0, left: 130},
     width = 900 - margin.left - margin.right,
     height = 700 - margin.top - margin.bottom;
   }else{
