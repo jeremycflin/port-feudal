@@ -935,5 +935,5 @@ function drawMultiLine(){
 // drawSmallMultiple();
 drawFirstCompare();
 drawSecondCompare();
-drawMultiLine();
+// drawMultiLine();
 
