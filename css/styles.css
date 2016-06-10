@@ -1120,7 +1120,7 @@ header video{
 }
 
 .mobile #intro-video{
-  width:100%;
+  width:120%;
   max-height:800px;
   top:65%;
 }
@@ -1293,6 +1293,11 @@ header video{
   stroke:#FF0076;
   stroke-width:4;
 }
+
+.mobile #skrollr-body{
+ margin-left:70px;
+}
+
 
 /*.mobile .mobile-smallChartLabel{
   font-size: 40px;
