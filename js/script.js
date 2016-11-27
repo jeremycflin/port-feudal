@@ -29,6 +29,18 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 });
 }
 
+function promptPass(){
+  var pass = prompt("Sorry! We are currently embargoing this story.");
+  if(pass!="USAToday"){
+    alert('Sorry mom, you cannot see this!');
+    promptPass();
+  }else{
+    alert('Good password!');
+  }
+}
+
+promptPass();
+
 
 jQuery(document).ready(function($){
     $('.lazy').laziestloader();
